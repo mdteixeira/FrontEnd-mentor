@@ -23,25 +23,24 @@
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
-            html {
-              height: 100vh;
-                display: flex;
+            body {
+                height: 100vh;
                 justify-content: center;
                 align-content: center;
-                flex-wrap: wrap;
+                display: grid;
                 font-family: 'Outfit', sans-serif;
                 background-color: hsl(212, 45%, 89%);
             }
             .card {
-              box-shadow: 0 10px 15px 0 hsl(219, 31%, 82%);
+                text-align: center;
                 border-radius: 1.2rem;
-                width: 19rem;
+                max-width: 18.5rem;
                 display: grid;
                 background: hsl(0, 0%, 100%);
                 padding: 1rem;
             }
             img {
-              border-radius: 0.7rem;
+                border-radius: 0.7rem;
                 width: 100%;
             }
             .attribution {
@@ -51,10 +50,8 @@
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
-            h2,
-            p {
-              padding: 0 1rem;
-                text-align: center;
+            .card-body {
+                padding: 0 0.5rem;
             }
         </style>
     </head>
@@ -62,21 +59,34 @@
         <div class="card">
             <img src="images/image-qr-code.png" class="qrcode" alt="" />
 
-            <h2>Improve your front-end skills by building projects</h2>
+            <div class="card-body">
+                <h2 style="color: rgb(60, 60, 60); font-size: 24px">
+                    <strong
+                        >Improve your front-end skills by building
+                        projects</strong
+                    >
+                </h2>
 
-            <p style="margin-top: 0; font-size: 15px; color: hsl(220, 15%, 55%); font-weight: 400;">
-              Scan the QR code to visit Frontend Mentor and take your coding
-              skills to the next level
-            </p>
-
-          </div>
-          <div class="attribution" style="padding-top: 30px;">
-              Challenge by
-              <a
-                  href="https://www.frontendmentor.io?ref=challenge"
-                  target="_blank"
-                  >Frontend Mentor</a
-              >. Coded by <a href="#">Matheus Teixeira</a>.
-          </div>
+                <p
+                    style="
+                        font-size: 16px;
+                        color: hsl(220, 15%, 55%);
+                        font-weight: 300;
+                    "
+                >
+                    Scan the QR code to visit Frontend Mentor and take your
+                    coding skills to the next level
+                </p>
+            </div>
+        </div>
+        <div class="attribution" style="padding-top: 30px">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/mdteixeira" target="_blank">Matheus Teixeira</a>. <br />
+            Available at <a href="https://github.com/mdteixeira/FrontEnd-mentor">GitHub</a>.
+        </div>
     </body>
 </html>
