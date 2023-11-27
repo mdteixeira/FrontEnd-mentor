@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Frontend Mentor | Age calculator app</title>
+
+        <style>
+            * {
+                font-family: 'Poppins', sans-serif;
+                color: hsl(0, 0%, 8%);
+            }
+
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+
+            .response {
+                font-size: 32px;
+                font-weight: 800;
+                font-style: italic;
+            }
+            .response span {
+                color: hsl(259, 100%, 65%);
+            }
+
+            .error-border {
+                border-color: #ff5757;
+            }
+
+            .error-text {
+                color: #ff5757;
+            }
+
+            input:active {
+                border: 1px solid hsl(259, 100%, 65%) !important;
+            }
+
+            #error-1,
+            #error-2,
+            #error-3 {
+                font-weight: 400;
+                font-style: italic;
+                color: #ff5757;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body class="bg-[#f0f0f0] grid place-items-center h-screen">
+        <main
+            class="bg-white p-10 py-12 rounded-3xl"
+            style="border-bottom-right-radius: 10rem !important"
+        >
+            <div class="input-fields flex gap-6">
+                <div class="input-field flex flex-1 flex-col">
+                    <label id="label-1" for="day" class="text-xs uppercase tracking-widest"
+                        >day</label
+                    >
+                    <input
+                        type="number"
+                        placeholder="DD"
+                        name="day"
+                        id="day"
+                        class="w-32 text-3xl p-3 border rounded-l"
+                    />
+                    <p id="error-1" class="hidden">Teste</p>
+                </div>
+                <div class="input-field flex flex-1 flex-col">
+                    <label id="label-2" for="day" class="text-xs uppercase tracking-widest"
+                        >month</label
+                    >
+                    <input
+                        type="number"
+                        placeholder="MM"
+                        name="month"
+                        id="month"
+                        class="w-32 text-3xl p-3 border rounded-l"
+                    />
+                    <p id="error-2" class="hidden">Teste</p>
+                </div>
+                <div class="input-field flex flex-1 flex-col">
+                    <label id="label-3" for="day" class="text-xs uppercase tracking-widest"
+                        >year</label
+                    >
+                    <input
+                        type="number"
+                        placeholder="YYYY"
+                        name="year"
+                        id="year"
+                        class="w-32 text-3xl p-3 border rounded-l"
+                    />
+                    <p id="error-3" class="hidden">Teste</p>
+                </div>
+                <div class="w-32"></div>
+            </div>
+            <div class="separator flex items-center">
+                <hr class="w-full" />
+                <button
+                    type="button"
+                    class="bg-[#854dff] rounded-full p-5 active:bg-black"
+                    onclick="calculate()"
+                >
+                    <img src="./assets/images/icon-arrow.svg" alt="arrow" />
+                </button>
+            </div>
+
+            <h1 class="response text-[96px] leading-none">
+                <span id="Oyears">--</span> years
+            </h1>
+            <h1 class="response text-[96px] leading-none">
+                <span id="Omonths">--</span> months
+            </h1>
+            <h1 class="response text-[96px] leading-none">
+                <span id="Odays">--</span> days
+            </h1>
+        </main>
+
+        <script src="js.js"></script>
+    </body>
+</html>
